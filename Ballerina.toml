@@ -1,0 +1,23 @@
+[package]
+org = "wso2"
+name = "grpc_sample"
+version = "0.1.0"
+distribution = "2201.8.6"
+
+[build-options]
+observabilityIncluded = true
+
+[[dependency]]
+org = "ballerina"
+name = "grpc"
+version = "1.10.0"
+
+[[dependency]]
+org = "ballerina"
+name = "protobuf"
+version = "1.9.0"
+
+[[dependency]]
+org = "ballerina"
+name = "log"
+version = "2.9.0"
