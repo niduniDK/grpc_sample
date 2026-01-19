@@ -1,6 +1,6 @@
 import ballerina/io;
 
-GreeterClient ep = check new ("http://localhost:9090");
+GreeterClient ep = check new ("http://localhost:8082");
 
 public function main() returns error? {
     HelloRequest sayHelloRequest = {name: "ballerina"};
