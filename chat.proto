@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package chat;
+import "google/protobuf/empty.proto";
+
+// The chat service definition.
+service Chat {
+  // Sends a chat.
+  rpc sendReply(stream ChatRequest) returns (stream ChatReply);
+  rpc sayHi(google.protobuf.Empty) returns (HiMsg);
+}
+
+// The request message with the user's msg.
+message ChatRequest {
+  string msg = 1;
+}
+
+// The response message with the reply.
+message ChatReply {
+  string msgReply = 1;
+}
+
+// Response saying Hi
+message HiMsg {
+    string Himsg = 1;
+}
