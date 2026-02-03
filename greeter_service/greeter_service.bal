@@ -1,6 +1,8 @@
 import ballerina/grpc;
 
-listener grpc:Listener grpcListener = new (8082);
+int port = 8082;
+
+listener grpc:Listener grpcListener = new (port);
 
 @grpc:Descriptor {value: HELLOWORLD_DESC}
 service "Greeter" on grpcListener {

@@ -1,6 +1,6 @@
 import ballerina/grpc;
 
-listener grpc:Listener ep = new (9090);
+listener grpc:Listener ep = new (9091);
 
 @grpc:Descriptor {value: CHAT_DESC}
 service "Chat" on ep {
