@@ -269,6 +269,18 @@ modules = [
 ]
 
 [[package]]
+org = "devant"
+name = "service_info_extractor"
+version = "0.1.0"
+dependencies = [
+	{org = "ballerina", name = "io"},
+	{org = "ballerinai", name = "observe"}
+]
+modules = [
+	{org = "devant", packageName = "service_info_extractor", moduleName = "service_info_extractor"}
+]
+
+[[package]]
 org = "nidunidk"
 name = "greeter_service"
 version = "0.1.0"
@@ -276,7 +288,8 @@ dependencies = [
 	{org = "ballerina", name = "grpc"},
 	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "protobuf"},
-	{org = "ballerinai", name = "observe"}
+	{org = "ballerinai", name = "observe"},
+	{org = "devant", name = "service_info_extractor"}
 ]
 modules = [
 	{org = "nidunidk", packageName = "greeter_service", moduleName = "greeter_service"}

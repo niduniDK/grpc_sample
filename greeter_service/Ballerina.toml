@@ -9,6 +9,5 @@ org = "ballerina"
 name = "grpc"
 version = "1.14.4"
 
-
 [build-options]
 observabilityIncluded = true

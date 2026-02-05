@@ -6,7 +6,7 @@ import "google/protobuf/empty.proto";
 // The chat service definition.
 service Chat {
   // Sends a chat.
-  rpc sendReply(stream ChatRequest) returns (stream ChatReply);
+  rpc sendReply(ChatRequest) returns (ChatReply);
   rpc sayHi(google.protobuf.Empty) returns (HiMsg);
 }
 
