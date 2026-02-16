@@ -8,6 +8,11 @@ service Greeter {
   rpc sayHello(HelloRequest) returns (HelloReply);
 }
 
+service Chat {
+  rpc sendMsg(UserMessage) returns (ChatDetails);
+  rpc bdayWish(Recepient) returns (BdayWish);
+}
+
 // The request message with the user's name.
 message HelloRequest {
   string name = 1;
@@ -16,4 +21,22 @@ message HelloRequest {
 // The response message with the greetings.
 message HelloReply {
   string message = 1;
+}
+
+message UserMessage{
+  string name = 1;
+  string text = 2;
+}
+
+message ChatDetails{
+  string senderName = 1;
+  string text = 2;
+}
+
+message Recepient{
+  string name = 1;
+}
+
+message BdayWish{
+  string wish = 1;
 }
