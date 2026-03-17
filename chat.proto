@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+service Chat {
+  rpc sendMsg(UserMessage) returns (ChatDetails);
+  rpc bdayWish(Recepient) returns (BdayWish);
+}
+
+message UserMessage{
+  string name = 1;
+  string text = 2;
+}
+
+message ChatDetails{
+  string senderName = 1;
+  string text = 2;
+}
+
+message Recepient{
+  string name = 1;
+}
+
+message BdayWish{
+  string wish = 1;
+}

@@ -2,7 +2,7 @@ import ballerina/grpc;
 
 listener grpc:Listener ep1 = new (9091);
 
-@grpc:Descriptor {value: HELLOWORLD_DESC}
+@grpc:Descriptor {value: CHAT_DESC}
 service "Chat" on ep1 {
 
     remote function sendMsg(UserMessage value) returns ChatDetails|error {
